@@ -1,0 +1,716 @@
+/* =========================
+   RESET + GLOBAL
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7efe3;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #000;
+}
+
+/* =========================
+   BASE CONTAINER
+   центр ТОЛЬКО по горизонтали
+   ========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;        /* ⬅️ ЕДИНСТВЕННЫЙ ЦЕНТР */
+  padding: 16px;
+}
+
+/* =========================
+   AUTH
+   ========================= */
+
+.auth-screen {
+  padding-top: 32px;     /* сверху, НЕ центр по вертикали */
+}
+
+.auth-card {
+  max-width: 360px;
+  margin: 0 auto;        /* auth по центру */
+  padding: 24px;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.auth-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.auth-field {
+  margin-bottom: 16px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+}
+
+.input-error {
+  border: 1px solid #e53935;
+}
+
+.error-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #e53935;
+}
+
+.auth-button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================
+   CITY SELECT
+   ========================= */
+
+.city-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e65100;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e65100;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .city-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .city-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.city-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.city-card img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.city-name {
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   BEACH LIST
+   ========================= */
+
+.beach-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e65100;
+  color: #e65100;
+  font-weight: 600;
+}
+
+.beach-back {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #e65100;
+  cursor: pointer;
+}
+
+.beach-header-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.beach-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .beach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .beach-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.beach-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.beach-card img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.beach-name {
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* =========================
+   BOTTOM NAV (MOBILE)
+   ========================= */
+
+
+
+
+  /* =========================
+   BOTTOM NAV (MOBILE)
+   ========================= */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #fff1dc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-item--active {
+  font-weight: 600;
+}
+
+
+
+/* =========================
+   PROFILE
+   ========================= */
+
+.profile-page {
+  padding-top: 16px;
+}
+
+/* header */
+.profile-header {
+  margin-bottom: 16px;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.profile-phone {
+  margin-top: 4px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* stats */
+.profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profile-stat {
+  background: #bfe3ef;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.stat-title {
+  font-size: 13px;
+  color: #333;
+}
+
+.stat-value {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* payment card */
+.profile-card {
+  background: #bfe3ef;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.profile-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.bank-icon {
+  background: #ffd600;
+  color: #000;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.profile-action {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.plus {
+  font-size: 18px;
+}
+
+/* help */
+.profile-help {
+  background: #bfe3ef;
+  border-radius: 16px;
+  padding: 8px 0;
+  margin-bottom: 24px;
+}
+
+.profile-help-item {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* logout */
+.profile-logout {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #e53935;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   SUNBEDS
+   ========================= */
+
+.sunbeds-page {
+  padding-bottom: 120px; /* место под кнопку + навбар */
+}
+
+/* header */
+.sunbeds-header {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sunbeds-back {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #e65100;
+  cursor: pointer;
+}
+
+.sunbeds-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e65100;
+}
+
+.sunbeds-pin {
+  text-align: right;
+}
+
+/* grid */
+.sunbeds-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* шахматка */
+  gap: 12px;
+}
+
+.sunbed {
+  background: #f36b21;
+  border-radius: 10px;
+  padding: 10px 4px;
+  text-align: center;
+  color: #fff;
+}
+
+.sunbed-icon {
+  font-size: 18px;
+}
+
+.sunbed-number {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* адаптация */
+@media (max-width: 480px) {
+  .sunbeds-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================
+   QR BUTTON
+   ========================= */
+
+.qr-button {
+  position: fixed;
+  bottom: 88px; /* над bottom-nav */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: #f36b21;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+
+
+/* BACKDROP */
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.booking-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+}
+
+/* HANDLE */
+.sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: #bbb;
+  border-radius: 2px;
+  margin: 8px auto;
+}
+
+/* CONTENT */
+.sheet-content {
+  padding: 16px;
+}
+
+.sheet-title {
+  font-size: 16px;
+  color: #777;
+}
+
+.sheet-sunbed {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* INTERVALS */
+.sheet-intervals {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sheet-interval {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #d8ecf6;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.sheet-interval.active {
+  background: #8bd3f7;
+  font-weight: 600;
+  color:#000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* CONFIRM */
+.sheet-confirm {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+
+/* ACTIVE BOOKINGS*/
+
+.active-bookings-page {
+  padding-bottom: 80px;
+}
+
+/* список */
+.active-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* карточка */
+.active-booking-card {
+  background: #9fd3e6;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* текст */
+.booking-city {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.booking-beach {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.booking-sunbed {
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.booking-remaining {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.remaining-time {
+  color: #d84315;
+  font-weight: 600;
+}
+
+/* кнопка */
+.booking-finish {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background: #d84315;
+  color: white;
+  font-weight: 600;
+}
+
+.sheet-total {
+  margin-top: 24px;
+  margin-bottom: 20px; /* ⬅️ ВАЖНО */
+  font-size: 16px;
+}
+
+
+/* POP-UP*/
+/* Затемнённый фон */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Сам popup */
+.popup {
+  background: #F9ECDC;
+  border-radius: 16px;
+  padding: 24px 20px;
+  width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Текст */
+.popup p {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-action {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #d84315;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.popup-action.secondary {
+  background: #d84315;
+  color: #fff;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #ddd;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body:has(.overlay) {
+  overflow: hidden;
+}
+
+
+/* BOOKING HISTORY */
+.booking-history-page {
+  padding-bottom: 80px;
+}
+
+.booking-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-history-card {
+  background: #9fd3e6;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.booking-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-date {
+  font-size: 13px;
+  color: #d84315;
+  font-weight: 600;
+}
+
+.booking-time {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.booking-label {
+  color: #d84315;
+  font-weight: 600;
+}
+
+.booking-price {
+  margin-top: 10px;
+  font-weight: 600;
+}

@@ -1,0 +1,53 @@
+.owner-beach-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* картинка */
+.owner-beach-image {
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.owner-beach-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* правая колонка */
+.owner-beach-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 📱 МОБИЛА */
+@media (max-width: 768px) {
+  .owner-beach-header {
+    flex-direction: column;
+    align-items: stretch;      /* ⬅️ ВАЖНО: full-width */
+  }
+
+  .owner-beach-image {
+    max-width: 100%;
+  }
+
+  /* карточки остаются на всю ширину */
+  .owner-beach-info {
+    width: 100%;
+  }
+
+  /* центрируем КОНТЕНТ внутри карточек */
+  .owner-beach-info .profile-card {
+    text-align: center;
+  }
+
+  /* статы по центру */
+  .profile-stats {
+    justify-content: center;
+  }
+}
+
